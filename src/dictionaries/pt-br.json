@@ -1,9 +1,31 @@
 {
   "header": {
-    "title": "...",
-    "button": "..."
+    "logo_url": "/camila-navegacao-e-transportes-logo.svg",
+    "logo_alt": "Logo da Camila Navegação e Transportes",
+    "title": "CNT - Camila Navegação e Transportes",
+    "button": "Fale Conosco",
+    "nav":{
+      "home": "Início",
+      "journeys": "Travessias",
+      "social_projects": "Projetos Sociais",
+      "contact": "Contatos"
+    }
+  },
+  "hero": {
+    "title_highlight": "Interligamos comunidades e regiões",
+    "title_sub": "com segurança, conforto e velocidade sob os nossos rios amazônicos."
+  },
+  "history": {
+    "title": "Nossa História",
+    "description": "Fundada em 1994 na cidade de Belém-PA, a empresa Camila Navegação e Transporte vem traçando seu caminho de desenvolvimento e crescimento contínuo, contribuindo de forma efetiva no progresso da região amazônica."
   },
   "footer": {
-    "copyright": "..."
+    "company_name": "Camila Navegação e Transportes",
+    "office_title": "Escritório Central",
+    "address": "Tv. Barão do Triunfo, 3540, sala 2811 - Belém PA - CEP: 66095-055",
+    "email": "contato@camilanavegacao.com.br",
+    "phone_label": "Tel",
+    "phone_number": "(91) 2121-6440",
+    "copyright": "Todos os direitos reservados Camila Navegação - Copyright 2023"
   }
 }

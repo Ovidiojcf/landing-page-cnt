@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { isValidLocale, locales, type Locale } from "@/get-dictionary";
+import { isValidLocale, locales, type Locale, getDictionary } from "@/get-dictionary";
 import "../globals.css";
+import { Header } from "@/components/layout/Header";
 
 interface LangLayoutProps {
   children: React.ReactNode;
@@ -23,10 +24,8 @@ export async function generateMetadata({
     return {};
   }
 
-  // Exemplo futuro: const dictionary = await getDictionary(lang);
-  // return { title: dictionary.header.title };
-
-  return {};
+  const dictionary = await getDictionary(lang as Locale);
+  return { title: dictionary.header.title };
 }
 
 export default async function LangLayout({ children, params }: LangLayoutProps) {
@@ -37,14 +36,14 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
   }
 
   const locale = lang as Locale;
-
-  // Fetch do dicionário: descomente quando for consumir traduções neste layout
-  // ou passe `dictionary` via React Context para os componentes filhos.
-  // const dictionary = await getDictionary(locale);
+  const dictionary = await getDictionary(locale);
 
   return (
     <html lang={locale}>
-      <body>{children}</body>
+      <body>  
+        <Header lang={locale} dict={dictionary.header} />
+        {children}
+      </body>
     </html>
   );
 }
