@@ -118,17 +118,57 @@ function MobileMenu({ isOpen, lang, dict, onClose }: MobileMenuProps) {
       aria-label="Mobile navigation"
     >
       <ul className="flex flex-col gap-1">
-        {navItems.map((item) => (
-          <li key={item.key}>
-            <Link
-              href={item.href}
-              onClick={onClose}
-              className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 transition-colors hover:bg-white/10 hover:text-white"
-            >
-              {dict.nav[item.key]}
-            </Link>
-          </li>
-        ))}
+        {/* Home */}
+        <li>
+          <Link
+            href={`/${lang}`}
+            onClick={onClose}
+            className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 transition-colors hover:bg-white/10 hover:text-white"
+          >
+            {dict.nav.home}
+          </Link>
+        </li>
+
+        <li>
+          <div className="px-3 py-2 text-sm font-medium text-white/50">{dict.nav.journeys}</div>
+          <Link
+            href={`/${lang}/travessias/belem-macapa`}
+            onClick={onClose}
+            className="block rounded-lg pl-6 pr-3 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+          >
+            Belém x Macapá
+          </Link>
+          <Link
+            href={`/${lang}/travessias/belem-manaus`}
+            onClick={onClose}
+            className="block rounded-lg pl-6 pr-3 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+          >
+            Belém x Manaus
+          </Link>
+        </li>
+
+        {/* Projetos Sociais */}
+        <li>
+           <div className="px-3 py-2 text-sm font-medium text-white/50">{dict.nav.social_projects}</div>
+          <Link
+            href={`/${lang}/projetos-sociais/ribeirinhos`}
+            onClick={onClose}
+            className="block rounded-lg pl-6 pr-3 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+          >
+            Apoio aos Ribeirinhos
+          </Link>
+        </li>
+
+        {/* Contato */}
+        <li>
+          <Link
+            href={`/${lang}/contato`}
+            onClick={onClose}
+            className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 transition-colors hover:bg-white/10 hover:text-white"
+          >
+            {dict.nav.contact}
+          </Link>
+        </li>
       </ul>
 
       <div className="mt-4 border-t border-white/10 pt-4">
