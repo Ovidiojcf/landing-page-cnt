@@ -175,15 +175,14 @@ export function Header({ lang, dict }: HeaderProps) {
           />
         </Link>
 
-        {/* NAVEGAÇÃO DESKTOP (Substituído: Sai o .map, entram os Dropdowns reais) */}
+
         <nav className="hidden items-center gap-6 md:flex" aria-label="Main navigation">
           
-          {/* Início */}
+
           <Link href={`/${lang}`} className="text-sm font-medium text-white/80 transition-colors hover:text-white">
             {dict.nav.home}
           </Link>
 
-          {/* Travessias (Dropdown) */}
           <div className="relative group py-2">
             <button className="flex items-center gap-1 text-sm font-medium text-white/80 transition-colors hover:text-white">
               {dict.nav.journeys}
