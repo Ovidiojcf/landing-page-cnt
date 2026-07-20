@@ -44,3 +44,11 @@ You are an expert in TypeScript, Node.js, Next.js App Router, React, Shadcn UI, 
     - Avoid for data fetching or state management.
   
   Follow Next.js docs for Data Fetching, Rendering, and Routing.
+
+Internationalization (i18n) Rules
+- The project implements i18n using dynamic route segments (e.g., app/[lang]/page.tsx) and a dictionary pattern (get-dictionary).
+- Never hardcode text strings in the UI. All text content must be extracted from dictionary objects.
+- Localized pages and components must receive `lang: Locale` as a prop.
+- Components that require translations must receive a typed `dict` object as a prop (e.g., `dict: ComponentDictionaryInterface`).
+- Always define a clear TypeScript interface for the dictionary structure expected by a component.
+- When generating localized internal links, always include the `lang` prefix in the path (e.g., `/${lang}/contact`).
