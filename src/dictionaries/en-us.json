@@ -20,6 +20,8 @@
     "description": "Founded in 1994 in the city of Belém-PA, Camila Navegação e Transporte has been charting its path of continuous growth and development, effectively contributing to the progress of the Amazon region."
   },
   "footer": {
+    "logo_url": "/camila-navegacao-e-transportes-logo.svg",
+    "logo_alt": "Logo da Camila Navegação e Transportes",
     "company_name": "Camila Navegação e Transportes",
     "office_title": "Headquarters",
     "address": "Tv. Barão do Triunfo, 3540, Room 2811 - Belém, PA - CEP: 66095-055",

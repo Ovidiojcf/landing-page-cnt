@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { isValidLocale, locales, type Locale, getDictionary } from "@/get-dictionary";
 import "../globals.css";
 import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 interface LangLayoutProps {
   children: React.ReactNode;
@@ -42,6 +43,7 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
     <html lang={locale}>
       <body>  
         <Header lang={locale} dict={dictionary.header} />
+        <Footer lang={locale} dict={dictionary.footer} />
         {children}
       </body>
     </html>
