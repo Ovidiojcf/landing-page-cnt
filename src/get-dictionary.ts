@@ -1,12 +1,9 @@
 import type ptBrDictionary from "./dictionaries/pt-br.json";
+import { defaultLocale, isValidLocale, type Locale } from "./i18n";
 
-export const locales = ["pt-br", "en-us"] as const;
-
-export type Locale = (typeof locales)[number];
+export { defaultLocale, isValidLocale, locales, type Locale } from "./i18n";
 
 export type Dictionary = typeof ptBrDictionary;
-
-export const defaultLocale: Locale = "pt-br";
 
 const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
   "pt-br": () =>
@@ -14,10 +11,6 @@ const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
   "en-us": () =>
     import("./dictionaries/en-us.json").then((module) => module.default),
 };
-
-export function isValidLocale(locale: string): locale is Locale {
-  return locales.includes(locale as Locale);
-}
 
 export async function getDictionary(locale: string): Promise<Dictionary> {
   const resolvedLocale = isValidLocale(locale) ? locale : defaultLocale;
