@@ -29,5 +29,16 @@
     "phone_label": "Phone",
     "phone_number": "(91) 2121-6440",
     "copyright": "All rights reserved Camila Navegação - Copyright 2023"
+  },
+  "company": {
+    "title": "The Company",
+    "subtitle": "Our company stands out in the following activities:",
+    "activities": {
+      "ferry": "Vehicles and passengers crossing via Ferryboats and Barges.",
+      "cargo": "Freight transport, waterborne mode.",
+      "rental": "Boat rental.",
+      "port_admin": "Port administration IP4.",
+      "construction": "Boat construction and repair."
+    }
   }
 }
