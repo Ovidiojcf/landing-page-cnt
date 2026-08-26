@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isValidLocale, locales, type Locale, getDictionary } from "@/get-dictionary";
-import "../globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { HtmlLang } from "@/components/layout/HtmlLang";
 
 interface LangLayoutProps {
   children: React.ReactNode;
@@ -40,12 +40,11 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
   const dictionary = await getDictionary(locale);
 
   return (
-    <html lang={locale}>
-      <body>  
-        <Header lang={locale} dict={dictionary.header} />
-        <Footer lang={locale} dict={dictionary.footer} />
-        {children}
-      </body>
-    </html>
+    <>
+      <HtmlLang lang={locale} />
+      <Header lang={locale} dict={dictionary.header} />
+      {children}
+      <Footer lang={locale} dict={dictionary.footer} />
+    </>
   );
 }

@@ -1,5 +1,6 @@
 {
-  "files.autoSave": "afterDelay",
-  "workbench.preferredHighContrastColorTheme": "Dark+",
-  "workbench.colorTheme": "Dark 2026",
+    "files.autoSave": "afterDelay",
+    "workbench.preferredHighContrastColorTheme": "Dark+",
+    "workbench.colorTheme": "Cursor Dark Midnight",
+    "workbench.preferredLightColorTheme": "Cursor Dark"
 }
