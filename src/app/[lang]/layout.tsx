@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { isValidLocale, locales, type Locale, getDictionary } from "@/get-dictionary";
+import {
+  isValidLocale,
+  locales,
+  type Locale,
+  getDictionary,
+} from "@/get-dictionary";
 import "../globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SectionActivity } from "@/components/layout/SectionActivity";
 
 interface LangLayoutProps {
   children: React.ReactNode;
@@ -29,7 +35,10 @@ export async function generateMetadata({
   return { title: dictionary.header.title };
 }
 
-export default async function LangLayout({ children, params }: LangLayoutProps) {
+export default async function LangLayout({
+  children,
+  params,
+}: LangLayoutProps) {
   const { lang } = await params;
 
   if (!isValidLocale(lang)) {
@@ -41,10 +50,10 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
 
   return (
     <html lang={locale}>
-      <body>  
+      <body>
         <Header lang={locale} dict={dictionary.header} />
-        <Footer lang={locale} dict={dictionary.footer} />
         {children}
+        <Footer lang={locale} dict={dictionary.footer} />
       </body>
     </html>
   );
