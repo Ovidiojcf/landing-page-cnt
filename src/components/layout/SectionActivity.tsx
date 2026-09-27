@@ -25,72 +25,76 @@ export interface SectionProps {
 // skew-x-12 -left-40 object-fill
 export function SectionActivity({ lang, dict }: SectionProps) {
   return (
-    <section className="bg-[#23314D] text-white py-8">
-      <h2 className="text-center font-bold text-[2.5rem]">{dict.title}</h2>
+    <section className="bg-[#23314D] text-white py-8 w-full mr-auto ml-auto flex-col flex">
+      <h2 className="text-center font-bold text-[2.5rem] bg-[]">{dict.title}</h2>
       <div className="place-content-center w-58 bg-[#BD423F]">
         <span className="h-2"></span>
         <span className="h-1"></span>
       </div>
       <p className="text-center text-[1rem]">{dict.subtitle}</p>
-      <div className="grid grid-flow-col grid-cols-5 overflow-x-scroll mx-auto max-w-243 -skew-x-12">
-        <article>
-          <div className="w-[184px] h-[260px] backface-hidden overflow-hidden ">
+      <div className="min-h-auto min-w-10 max-w-300 ml-auto mr-auto">
+        <div className="flex m-0 w-full">
+          <article className="w-66.25 h-60 ml-[calc(-92px)]">
+              <Image
+                src="/ferry.webp"
+                alt={dict.activities.ferry}
+                width={266}
+                height={260}
+                className="h-60 mask-clip-content mask-[url(/section-mask.svg)]"
+              />
+            <p className="text-center text-sm w-35 content-center m-auto">
+              {dict.activities.ferry}
+            </p>
+          </article>
+          <article className="ml-[calc(-92px)]">
             <Image
-              src="/ferry.webp"
-              alt={dict.activities.ferry}
-              width={200}
-              height={300}
-              className=""
+              src="/cargo.webp"
+              alt={dict.activities.cargo}
+              width={266}
+              height={260}
+              className="h-60 mask-clip-content mask-[url(/section-mask.svg)] ml-1"
             />
-          </div>
-          <p className="text-center text-sm skew-x-12 w-46">
-            {dict.activities.construction}
-          </p>
-        </article>
-        <article>
-          <Image
-            src="/cargo.webp"
-            alt={dict.activities.cargo}
-            width={184}
-            height={260}
-          />
-          <p className="text-center text-sm skew-x-12 w-46">
-            {dict.activities.cargo}
-          </p>
-        </article>
-        <article>
-          <Image
-            src={"/rental.webp"}
-            alt={dict.activities.rental}
-            width={184}
-            height={260}
-          />
-          <p className="text-center text-sm skew-x-12 w-46">
-            {dict.activities.rental}
-          </p>
-        </article>
-        <article>
-          <Image
-            src={"/port_admin.webp"}
-            alt={dict.activities.port_admin}
-            width={184}
-            height={260}
-          />
-          <p className="text-center text-sm skew-x-12 w-46">
-            {dict.activities.port_admin}
-          </p>
-        </article>
-        <article>
-          <Image
-            src={"/construction.webp"}
-            alt={dict.activities.construction}
-            width={184}
-            height={260}
-          />
-          <p className="text-center text-sm skew-x-12 w-46">
-            {dict.activities.construction}
-          </p>
-        </article>
+            <p className="text-center text-sm w-35 m-auto">
+              {dict.activities.cargo}
+            </p>
+          </article>
+          <article className="ml-[calc(-92px)]">
+            <Image
+              src={"/rental.webp"}
+              alt={dict.activities.rental}
+              width={266}
+              height={260}
+              className="h-60 mask-clip-content mask-[url(/section-mask.svg)] ml-1"
+            />
+            <p className="text-center text-sm w-35 m-auto">
+              {dict.activities.rental}
+            </p>
+          </article>
+          <article className="ml-[calc(-92px)]">
+            <Image
+              src={"/port_admin.webp"}
+              alt={dict.activities.port_admin}
+              width={266}
+              height={260}
+              className="h-60 mask-clip-content mask-[url(/section-mask.svg)] ml-1"
+            />
+            <p className="text-center text-sm w-35 m-auto">
+              {dict.activities.port_admin}
+            </p>
+          </article>
+          <article className="ml-[calc(-92px)]">
+            <Image
+              src={"/construction.webp"}
+              alt={dict.activities.construction}
+              width={266}
+              height={260}
+              className="h-60 mask-clip-content mask-[url(/section-mask.svg)] ml-1"
+            />
+            <p className="text-center text-sm w-35 m-auto">
+              {dict.activities.construction}
+            </p>
+          </article>
+        </div>
       </div>
     </section>
   );
