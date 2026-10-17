@@ -5,6 +5,49 @@
   --foreground: #171717;
 }
 
+/* Metropolis */
+@font-face {
+  font-family: 'Metropolis';
+  src: url('/fonts/Metropolis-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* 2. Nexa Bold */
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/NexaBold.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 3. Nexa Light (agrupada na mesma família 'Nexa', com peso 300) */
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/NexaLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 4. Nexa Bold Italic (agrupada na mesma família 'Nexa', com peso 700 e estilo itálico) */
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/NexaBoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Mapeamento das Variáveis no Tailwind v4 */
+@theme {
+  --font-manifestor: 'Manifestor', sans-serif;
+  --font-metropolis: 'Metropolis', sans-serif;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
