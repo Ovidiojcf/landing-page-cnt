@@ -43,8 +43,8 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
     <html lang={locale}>
       <body>  
         <Header lang={locale} dict={dictionary.header} />
-        <Footer lang={locale} dict={dictionary.footer} />
         {children}
+        <Footer lang={locale} dict={dictionary.footer} />
       </body>
     </html>
   );
