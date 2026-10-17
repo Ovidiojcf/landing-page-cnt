@@ -12,8 +12,11 @@
     }
   },
   "hero": {
-    "title_highlight": "We interconnect communities and regions",
-    "title_sub": "with safety, comfort, and speed across our Amazon rivers."
+    "title_highlight": "We interconnect",
+    "title": "communities and regions",
+    "title_sub_01": "with safety, comfort",
+    "title_sub_02": "and speed across our",
+    "title_sub_03": "Amazon rivers."
   },
   "history": {
     "title": "Our History",

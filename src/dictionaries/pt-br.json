@@ -12,8 +12,11 @@
     }
   },
   "hero": {
-    "title_highlight": "Interligamos comunidades e regiões",
-    "title_sub": "com segurança, conforto e velocidade sob os nossos rios amazônicos."
+    "title_highlight": "Interligamos",
+    "title": "comunidades e regiões",
+    "title_sub_01": "com segurança, conforto",
+    "title_sub_02": "e velocidade sob os nossos",
+    "title_sub_03": "rios amazônicos."
   },
   "history": {
     "title": "Nossa História",
