@@ -12,8 +12,45 @@
     }
   },
   "hero": {
-    "title_highlight": "Interligamos comunidades e regiões",
-    "title_sub": "com segurança, conforto e velocidade sob os nossos rios amazônicos."
+    "title_highlight": "Interligamos",
+    "title": "comunidades e regiões",
+    "title_sub_01": "com segurança, conforto",
+    "title_sub_02": "e velocidade sob os nossos",
+    "title_sub_03": "rios amazônicos."
+  },
+  "awards": {
+    "title": "Premiações",
+    "description": "A empresa Camila Navegação tem acumulado grandes premiações da Marinha do Brasil ao longo dos seus anos de existência.",
+    "navigation": {
+      "previous": "Premiação anterior",
+      "next": "Próxima premiação"
+    },
+    "items": [
+      {
+        "name": "Marinha do Brasil",
+        "image": "/awards/marinha-do-brasil.svg",
+        "alt": "Medalha da premiação Marinha do Brasil",
+        "description": "A descrição desta premiação será adicionada após o levantamento das informações."
+      },
+      {
+        "name": "Amigo da Marinha",
+        "image": "/awards/amigo-da-marinha.svg",
+        "alt": "Medalha da premiação Amigo da Marinha",
+        "description": "A descrição desta premiação será adicionada após o levantamento das informações."
+      },
+      {
+        "name": "Educando Pequeno Gigante",
+        "image": "/awards/educando-pequeno-gigante.svg",
+        "alt": "Medalha da premiação Educando Pequeno Gigante",
+        "description": "A descrição desta premiação será adicionada após o levantamento das informações."
+      },
+      {
+        "name": "Segurança da Navegação Comercial",
+        "image": "/awards/seguranca-navegacao-comercial.svg",
+        "alt": "Medalha da premiação Segurança da Navegação Comercial",
+        "description": "A descrição desta premiação será adicionada após o levantamento das informações."
+      }
+    ]
   },
   "history": {
     "title": "Nossa História",

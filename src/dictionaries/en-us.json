@@ -12,8 +12,45 @@
     }
   },
   "hero": {
-    "title_highlight": "We interconnect communities and regions",
-    "title_sub": "with safety, comfort, and speed across our Amazon rivers."
+    "title_highlight": "We interconnect",
+    "title": "communities and regions",
+    "title_sub_01": "with safety, comfort",
+    "title_sub_02": "and speed across our",
+    "title_sub_03": "Amazon rivers."
+  },
+  "awards": {
+    "title": "Awards",
+    "description": "Camila Navegação has received important awards from the Brazilian Navy throughout its history.",
+    "navigation": {
+      "previous": "Previous award",
+      "next": "Next award"
+    },
+    "items": [
+      {
+        "name": "Brazilian Navy",
+        "image": "/awards/marinha-do-brasil.svg",
+        "alt": "Brazilian Navy award medal",
+        "description": "Details about this award will be added once the information has been gathered."
+      },
+      {
+        "name": "Friend of the Navy",
+        "image": "/awards/amigo-da-marinha.svg",
+        "alt": "Friend of the Navy award medal",
+        "description": "Details about this award will be added once the information has been gathered."
+      },
+      {
+        "name": "Educando Pequeno Gigante",
+        "image": "/awards/educando-pequeno-gigante.svg",
+        "alt": "Educando Pequeno Gigante award medal",
+        "description": "Details about this award will be added once the information has been gathered."
+      },
+      {
+        "name": "Commercial Navigation Safety",
+        "image": "/awards/seguranca-navegacao-comercial.svg",
+        "alt": "Commercial Navigation Safety award medal",
+        "description": "Details about this award will be added once the information has been gathered."
+      }
+    ]
   },
   "history": {
     "title": "Our History",
