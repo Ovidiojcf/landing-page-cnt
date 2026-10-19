@@ -1,6 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
 import { Awards } from "@/components/sections/Awards";
-import { AwardsOldVersion } from "@/components/sections/AwardsOldVerision";
 import { getDictionary } from "@/get-dictionary";
 
 interface HomePageProps {
