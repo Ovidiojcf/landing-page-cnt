@@ -1,5 +1,5 @@
-
 import { Hero } from "@/components/sections/Hero";
+import { Awards } from "@/components/sections/Awards";
 import { getDictionary } from "@/get-dictionary";
 
 interface HomePageProps {
@@ -13,6 +13,7 @@ export default async function Home({ params }: HomePageProps) {
   return (
     <main>
       <Hero dict={dictionary.hero} />
+      <Awards dict={dictionary.awards}/>
     </main>
   );
 }
