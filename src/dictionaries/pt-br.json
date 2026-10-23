@@ -4,7 +4,7 @@
     "logo_alt": "Logo da Camila Navegação e Transportes",
     "title": "CNT - Camila Navegação e Transportes",
     "button": "Fale Conosco",
-    "nav":{
+    "nav": {
       "home": "Início",
       "journeys": "Travessias",
       "social_projects": "Projetos Sociais",
@@ -66,5 +66,39 @@
     "phone_label": "Tel",
     "phone_number": "(91) 2121-6440",
     "copyright": "Todos os direitos reservados Camila Navegação - Copyright 2023"
+  },
+  "fleet": {
+    "title": "Nossa Frota",
+    "description": "A empresa Camila Navegação possui uma frota de embarcações modernas e seguras, que garantem conforto e segurança aos passageiros durante as travessias pelos rios amazônicos.",
+    "items": [
+      {
+        "name": "Ferryboat",
+        "image": "/fleet/camila-i.jpg",
+        "alt": "Ferryboat Isis Pantoja",
+        "description": "Nossa empresa conta uma linha de ferryboats com capacidade para transportar passageiros e veículos, garantindo uma travessia segura e confortável. Somos a linha de frente que conecta operações entre cidades e regiões, com segurança, conforto e velocidade sob os rios amazônicos.",
+        "quantity": "7"
+      },
+      {
+        "name": "Balsas",
+        "image": "/fleet/camila-ii.jpg",
+        "alt": "Balsa Lady Neulzinha",
+        "description": "Temos balsas que conectam desde travessias curtas até de longas durações. Elas são projetadas para transportar passageiros e veículos com segurança e conforto, garantindo uma travessia tranquila e eficiente.",
+        "quantity": "9"
+      },
+      {
+        "name": "Empurradores",
+        "image": "/fleet/camila-iii.jpg",
+        "alt": "Empurrdor Vovo Wilson",
+        "description": "São os responsaveis por empurrar balsas e outros tipos de embarcações, garantindo a segurança e eficiência das travessias. Nossos empurradores são equipados com tecnologia de ponta para garantir a segurança e conforto dos passageiros.",
+        "quantity": "9"
+      },
+      {
+        "name": "Barcos Hospitais",
+        "image": "/fleet/camila-iv.jpg",
+        "alt": "Barco Hospital Camila IV",
+        "description": "A empresa auxilie em projetos sociais, como o transporte de pacientes e profissionais de saúde para regiões remotas da Amazônia. Nossos barcos hospitais são equipados com tecnologia de ponta para garantir a segurança e conforto dos passageiros.",
+        "quantity": "2"
+      }
+    ]
   }
 }
