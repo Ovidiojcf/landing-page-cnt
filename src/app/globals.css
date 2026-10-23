@@ -46,6 +46,7 @@
 @theme {
   --font-manifestor: 'Manifestor', sans-serif;
   --font-metropolis: 'Metropolis', sans-serif;
+  --font-nexa: 'Nexa', sans-serif;
 }
 
 @theme inline {

@@ -70,34 +70,35 @@
   "fleet": {
     "title": "Our Fleet",
     "description": "Camila Navegação operates a fleet of modern and safe vessels, ensuring comfort and security for passengers during river crossings across the Amazon region.",
+
     "items": [
       {
         "name": "Ferryboats",
         "image": "/fleet/camila-i.jpg",
         "alt": "Ferryboat Isis Pantoja",
         "description": "Our fleet includes ferryboats equipped to transport both passengers and vehicles safely and comfortably. We are on the frontline connecting cities and regions across Amazonian rivers with speed, safety, and reliability.",
-        "quantity": "7"
+        "quantity": "7 Ferryboats"
       },
       {
         "name": "Barges",
         "image": "/fleet/camila-ii.jpg",
         "alt": "Barge Lady Neulzinha",
         "description": "We operate barges suited for both short crossings and long-distance routes. They are engineered to transport vehicles and passengers safely, ensuring a smooth and efficient journey.",
-        "quantity": "9"
+        "quantity": "9 Barges"
       },
       {
         "name": "Pusher Tugs",
         "image": "/fleet/camila-iii.jpg",
         "alt": "Pusher Tug Vovo Wilson",
         "description": "Responsible for pushing barges and other vessels, ensuring operational safety and efficiency during river transit. Our pusher tugs are equipped with high-performance technology to support safe river transport.",
-        "quantity": "9"
+        "quantity": "9 Pusher Tugs"
       },
       {
         "name": "Hospital Ships",
         "image": "/fleet/camila-iv.jpg",
         "alt": "Hospital Ship Camila IV",
         "description": "We support social initiatives by transporting patients and healthcare professionals to remote areas in the Amazon. Our hospital vessels are equipped to provide safe and reliable medical support.",
-        "quantity": "2"
+        "quantity": "2 Hospital Ships"
       }
     ]
   }
