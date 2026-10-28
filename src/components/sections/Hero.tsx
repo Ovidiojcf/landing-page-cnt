@@ -12,7 +12,7 @@ interface HeroProps {
 
 export function Hero({ dict }: HeroProps) {
   return (
-    <section className="relative isolate flex min-h-[calc(100svh-4rem)] items-center justify-center overflow-hidden px-4 py-16 text-center md:min-h-[calc(100svh-5rem)] md:px-8">
+    <section className="relative isolate flex min-h-[calc(100svh-4rem)] items-center justify-center overflow-hidden px-4 py-16 text-center md:min-h-[calc(100svh-4.5rem)] md:px-8">
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-20 bg-cover bg-position-[50%_58%] md:bg-position-[50%_62%]"

@@ -32,13 +32,13 @@ export function Fleet({ dict }: FleetProps) {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
+        <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-8 md:gap-y-10">
           {dict.items.map((item) => (
             <article
               key={item.name}
-              className="overflow-hidden rounded-md border border-slate-900/10 bg-white"
+              className="min-w-0"
             >
-              <div className="relative aspect-16/5 w-full">
+              <div className="relative aspect-video max-h-70 w-full  overflow-hidden">
                 <Image
                   src="/FB_VALENTINA_02.png"
                   alt=""
@@ -56,7 +56,7 @@ export function Fleet({ dict }: FleetProps) {
                 <h3 className="font-metropolis text-xl text-blue-950 sm:text-2xl">
                   {item.name}
                 </h3>
-                <p className="mt-2 font-nexa text-base font-light leading-relaxed text-slate-700">
+                <p className="mt-2 max-w-prose font-nexa text-sm text-justify leading-6 text-slate-500">
                   {item.description}
                 </p>
               </div>
