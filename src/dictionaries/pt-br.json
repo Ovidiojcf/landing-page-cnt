@@ -18,6 +18,44 @@
     "title_sub_02": "e velocidade sob os nossos",
     "title_sub_03": "rios amazônicos."
   },
+  "journeys": {
+    "title": "Serviços",
+    "description": "Transporte de veículos e passageiros nos seguintes percursos.",
+    "directionSeparator": "para",
+    "schedulesLabel": "Horários e tarifas",
+    "routes": [
+      {
+        "state": "Pará",
+        "origin": "Santarém",
+        "destination": "Santana do Tapará"
+      },
+      {
+        "state": "Pará",
+        "origin": "Santarém",
+        "destination": "Aninduba"
+      },
+      {
+        "state": "Pará",
+        "origin": "Cametá",
+        "destination": "Carapajó"
+      },
+      {
+        "state": "Pará",
+        "origin": "Baião",
+        "destination": "Virgínia"
+      },
+      {
+        "state": "Pará",
+        "origin": "Viseu",
+        "destination": "Porto de Fora Tamixira"
+      },
+      {
+        "state": "Minas Gerais",
+        "origin": "Guapé",
+        "destination": "Araúna"
+      }
+    ]
+  },
   "awards": {
     "title": "Premiações",
     "description": "A empresa Camila Navegação tem acumulado grandes premiações da Marinha do Brasil ao longo dos seus anos de existência.",
@@ -77,5 +115,38 @@
       "port_admin": "Administração portuária IP4.",
       "construction": "Construção e reparo de embarcações."
     }
+  "fleet": {
+    "title": "Nossa Frota",
+    "description": "A empresa Camila Navegação possui uma frota de embarcações modernas e seguras, que garantem conforto e segurança aos passageiros durante as travessias pelos rios amazônicos.",
+    "items": [
+      {
+        "name": "Ferryboat",
+        "image": "/fleet/camila-i.jpg",
+        "alt": "Ferryboat Isis Pantoja",
+        "description": "Nossa empresa conta uma linha de ferryboats com capacidade para transportar passageiros e veículos, garantindo uma travessia segura e confortável. Somos a linha de frente que conecta operações entre cidades e regiões, com segurança, conforto e velocidade sob os rios amazônicos.",
+        "quantity": "7 Ferryboats"
+      },
+      {
+        "name": "Balsas",
+        "image": "/fleet/camila-ii.jpg",
+        "alt": "Balsa Lady Neulzinha",
+        "description": "Temos balsas que conectam desde travessias curtas até de longas durações. Elas são projetadas para transportar passageiros e veículos com segurança e conforto, garantindo uma travessia tranquila e eficiente.",
+        "quantity": "9 Balsas"
+      },
+      {
+        "name": "Empurradores",
+        "image": "/fleet/camila-iii.jpg",
+        "alt": "Empurrdor Vovo Wilson",
+        "description": "São os responsaveis por empurrar balsas e outros tipos de embarcações, garantindo a segurança e eficiência das travessias. Nossos empurradores são equipados com tecnologia de ponta para garantir a segurança e conforto dos passageiros.",
+        "quantity": "9 Empurradores"
+      },
+      {
+        "name": "Barcos Hospitais",
+        "image": "/fleet/camila-iv.jpg",
+        "alt": "Barco Hospital Camila IV",
+        "description": "A empresa auxilie em projetos sociais, como o transporte de pacientes e profissionais de saúde para regiões remotas da Amazônia. Nossos barcos hospitais são equipados com tecnologia de ponta para garantir a segurança e conforto dos passageiros.",
+        "quantity": "2 Barcos Hospitais"
+      }
+    ]
   }
 }
