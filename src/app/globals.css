@@ -68,3 +68,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes journeys-route-sailing {
+  to {
+    background-position: 18px 50%;
+  }
+}

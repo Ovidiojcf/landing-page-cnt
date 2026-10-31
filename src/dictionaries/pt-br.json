@@ -18,6 +18,44 @@
     "title_sub_02": "e velocidade sob os nossos",
     "title_sub_03": "rios amazônicos."
   },
+  "journeys": {
+    "title": "Serviços",
+    "description": "Transporte de veículos e passageiros nos seguintes percursos.",
+    "directionSeparator": "para",
+    "schedulesLabel": "Horários e tarifas",
+    "routes": [
+      {
+        "state": "Pará",
+        "origin": "Santarém",
+        "destination": "Santana do Tapará"
+      },
+      {
+        "state": "Pará",
+        "origin": "Santarém",
+        "destination": "Aninduba"
+      },
+      {
+        "state": "Pará",
+        "origin": "Cametá",
+        "destination": "Carapajó"
+      },
+      {
+        "state": "Pará",
+        "origin": "Baião",
+        "destination": "Virgínia"
+      },
+      {
+        "state": "Pará",
+        "origin": "Viseu",
+        "destination": "Porto de Fora Tamixira"
+      },
+      {
+        "state": "Minas Gerais",
+        "origin": "Guapé",
+        "destination": "Araúna"
+      }
+    ]
+  },
   "awards": {
     "title": "Premiações",
     "description": "A empresa Camila Navegação tem acumulado grandes premiações da Marinha do Brasil ao longo dos seus anos de existência.",

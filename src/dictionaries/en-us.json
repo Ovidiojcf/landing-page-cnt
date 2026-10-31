@@ -18,6 +18,44 @@
     "title_sub_02": "and speed across our",
     "title_sub_03": "Amazon rivers."
   },
+  "journeys": {
+    "title": "Services",
+    "description": "Passenger and vehicle transportation on the following routes.",
+    "directionSeparator": "to",
+    "schedulesLabel": "Schedules and fares",
+    "routes": [
+      {
+        "state": "Pará",
+        "origin": "Santarém",
+        "destination": "Santana do Tapará"
+      },
+      {
+        "state": "Pará",
+        "origin": "Santarém",
+        "destination": "Aninduba"
+      },
+      {
+        "state": "Pará",
+        "origin": "Cametá",
+        "destination": "Carapajó"
+      },
+      {
+        "state": "Pará",
+        "origin": "Baião",
+        "destination": "Virgínia"
+      },
+      {
+        "state": "Pará",
+        "origin": "Viseu",
+        "destination": "Porto de Fora Tamixira"
+      },
+      {
+        "state": "Minas Gerais",
+        "origin": "Guapé",
+        "destination": "Araúna"
+      }
+    ]
+  },
   "awards": {
     "title": "Awards",
     "description": "Camila Navegação has received important awards from the Brazilian Navy throughout its history.",
