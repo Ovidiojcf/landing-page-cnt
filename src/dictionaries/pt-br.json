@@ -105,6 +105,16 @@
     "phone_number": "(91) 2121-6440",
     "copyright": "Todos os direitos reservados Camila Navegação - Copyright 2023"
   },
+  "company": {
+    "title": "A Empresa",
+    "subtitle": "Nossa empresa se destaca nas seguintes atividades:",
+    "activities": {
+      "ferry": "Travessia de veículos e passageiros via Feryboat e Balsas.",
+      "cargo": "Transporte de carga, modal aquaviária.",
+      "rental": "Locação de embarcações.",
+      "port_admin": "Administração portuária IP4.",
+      "construction": "Construção e reparo de embarcações."
+    }
   "fleet": {
     "title": "Nossa Frota",
     "description": "A empresa Camila Navegação possui uma frota de embarcações modernas e seguras, que garantem conforto e segurança aos passageiros durante as travessias pelos rios amazônicos.",
