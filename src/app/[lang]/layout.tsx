@@ -9,7 +9,6 @@ import {
 import "../globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { SectionActivity } from "@/components/layout/SectionActivity";
 
 interface LangLayoutProps {
   children: React.ReactNode;
