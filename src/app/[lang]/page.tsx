@@ -3,6 +3,7 @@ import { Awards } from "@/components/sections/Awards";
 import { Fleet } from "@/components/sections/Fleet";
 import { Journeys } from "@/components/sections/Journeys";
 import { Activity } from "@/components/sections/Activity";
+import { History } from "@/components/sections/History";
 import { getDictionary } from "@/get-dictionary";
 
 interface HomePageProps {
@@ -19,6 +20,7 @@ export default async function Home({ params }: HomePageProps) {
       <Journeys dict={dictionary.journeys} />
       <Awards dict={dictionary.awards}/>
       <Activity dict={dictionary.company} />
+      <History dict={dictionary.history} />
       <Fleet dict={dictionary.fleet} />
     </main>
   );
