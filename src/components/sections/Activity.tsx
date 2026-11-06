@@ -81,7 +81,7 @@ export function Activity({ dict }: ActivitiesProps) {
         {dict.subtitle}
       </p>
 
-      <div className="mx-auto w-full max-w-5xl lg:max-w-6xl">
+      <div className="mx-auto w-full max-w-5xl lg:max-w-7xl">
         {/* Images */}
         <div className="grid w-full grid-cols-12 items-start">
           {activityCards.map(({ key, image, column, objectPosition }) => (
