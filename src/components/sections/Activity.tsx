@@ -104,15 +104,22 @@ export function Activity({ dict }: ActivitiesProps) {
         </div>
 
         {/* Captions */}
-        <div className="mt-3 grid w-full grid-cols-12 items-start">
-          {activityCards.map(({ key, column }) => (
-            <p
-              key={key}
-              className={`col-span-4 row-start-1 mx-auto w-1/2 px-0 text-center text-[10px] leading-tight font-semibold wrap-break-word sm:text-xs lg:w-[43%] lg:text-sm ${column}`}
-            >
-              {dict.activities[key]}
-            </p>
-          ))}
+        <div className="mt-3 grid w-full grid-cols-6 items-start">
+          <p className="col-start-1 row-start-1 w-full translate-x-1/2 px-0 text-center text-[9px] leading-snug font-semibold hyphens-auto sm:text-[11px] sm:hyphens-none lg:text-[13px]">
+            {dict.activities.ferry}
+          </p>
+          <p className="col-start-2 row-start-1 w-full translate-x-1/2 px-0 text-center text-[9px] leading-snug font-semibold hyphens-auto sm:text-[11px] sm:hyphens-none lg:text-[13px]">
+            {dict.activities.cargo}
+          </p>
+          <p className="col-start-3 row-start-1 w-full translate-x-1/2 px-0 text-center text-[9px] leading-snug font-semibold hyphens-auto sm:text-[11px] sm:hyphens-none lg:text-[13px]">
+            {dict.activities.rental}
+          </p>
+          <p className="col-start-4 row-start-1 w-full translate-x-1/2 px-0 text-center text-[9px] leading-snug font-semibold hyphens-auto sm:text-[11px] sm:hyphens-none lg:text-[13px]">
+            {dict.activities.port_admin}
+          </p>
+          <p className="col-start-5 row-start-1 w-full translate-x-1/2 px-0 text-center text-[9px] leading-snug font-semibold hyphens-auto sm:text-[11px] sm:hyphens-none lg:text-[13px]">
+            {dict.activities.construction}
+          </p>
         </div>
       </div>
     </section>
