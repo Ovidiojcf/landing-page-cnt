@@ -62,81 +62,45 @@ export function Awards({ dict }: AwardsProps) {
     setActiveIndex((index + totalAwards) % totalAwards);
   };
 
-  const displayedAwards = [
-    { data: previousAward, offset: -1 },
-    { data: activeAward, offset: 0 },
-    { data: nextAward, offset: 1 },
-  ];
+  const displayedAwards =
+    totalAwards > 1
+      ? [
+          { data: previousAward, offset: -1 },
+          { data: activeAward, offset: 0 },
+          { data: nextAward, offset: 1 },
+        ]
+      : [{ data: activeAward, offset: 0 }];
 
   return (
     <section
       aria-labelledby="awards-title"
-      className="bg-stone-50 px-4 py-14 text-slate-900 sm:px-6 md:py-20"
+      className="bg-stone-50 px-4 py-14 text-slate-900 sm:px-6 md:py-16"
     >
       <div className="mx-auto max-w-7xl">
-        <header className="mb-10 text-center sm:mb-14">
-          <h2 id="awards-title" className="font-metropolis text-3xl sm:text-4xl">
+        <header className="mx-auto mb-6 max-w-3xl text-center sm:mb-6">
+          <h2
+            id="awards-title"
+            className="font-metropolis text-2xl font-bold leading-tight tracking-tight sm:text-2xl"
+          >
             {dict.title}
           </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+            {dict.description}
+          </p>
         </header>
 
-        <div className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          {/* Coluna Esquerda: Texto Descritivo e Controles */}
-          <div className="flex flex-col gap-8">
-            <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-              {dict.description}
-            </p>
-
-            {totalAwards > 1 && (
-              <div className="flex items-center gap-5">
-                <button
-                  type="button"
-                  onClick={() => showAward(activeIndex - 1)}
-                  aria-label={dict.navigation.previous}
-                  className="flex size-11 items-center justify-center rounded-full border border-blue-950/20 text-blue-950 transition-colors hover:bg-blue-950 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-950"
-                >
-                  <ArrowIcon previous />
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => showAward(activeIndex + 1)}
-                  aria-label={dict.navigation.next}
-                  className="flex size-11 items-center justify-center rounded-full border border-blue-950/20 text-blue-950 transition-colors hover:bg-blue-950 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-950"
-                >
-                  <ArrowIcon />
-                </button>
-
-                <span className="text-xs font-semibold tabular-nums text-slate-500">
-                  {String(activeIndex + 1).padStart(2, "0")} /{" "}
-                  {String(totalAwards).padStart(2, "0")}
-                </span>
-              </div>
-            )}
-          </div>
-
-          {/* Coluna Direita: Exibição dos Cards (Anterior - Destaque - Próximo) */}
+        <div className="mx-auto max-w-5xl">
           <div
-            className="grid items-center gap-4 sm:gap-6 lg:grid-cols-[1fr_1.5fr_1fr]"
+            id="awards-carousel"
+            className="grid grid-cols-1 items-center gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,1.5fr)_minmax(0,1fr)] lg:gap-8"
             aria-live="polite"
+            aria-atomic="true"
           >
             {displayedAwards.map(({ data: award, offset }) => {
               const isFeatured = offset === 0;
               const targetIndex = (activeIndex + offset + totalAwards) % totalAwards;
-
-              return (
-                <button
-                  key={`${award.image}-${offset}`}
-                  type="button"
-                  onClick={() => showAward(targetIndex)}
-                  aria-label={award.name}
-                  aria-current={isFeatured ? "true" : undefined}
-                  className={`flex flex-col items-center text-center transition-all duration-300 ${
-                    isFeatured
-                      ? "py-4 text-blue-950"
-                      : "hidden scale-90 text-slate-500 opacity-60 hover:scale-95 hover:opacity-80 lg:flex"
-                  }`}
-                >
+              const content = (
+                <>
                   <Image
                     src={award.image}
                     alt={award.alt}
@@ -164,10 +128,59 @@ export function Awards({ dict }: AwardsProps) {
                       {award.description}
                     </p>
                   )}
+                </>
+              );
+
+              return isFeatured ? (
+                <article
+                  key={`${award.image}-${offset}`}
+                  aria-current="true"
+                  className="flex flex-col items-center py-4 text-center text-blue-950"
+                >
+                  {content}
+                </article>
+              ) : (
+                <button
+                  key={`${award.image}-${offset}`}
+                  type="button"
+                  onClick={() => showAward(targetIndex)}
+                  aria-label={award.name}
+                  className="hidden scale-90 flex-col items-center text-center text-slate-500 opacity-60 transition-all duration-300 hover:scale-95 hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-950 lg:flex"
+                >
+                  {content}
                 </button>
               );
             })}
           </div>
+
+          {totalAwards > 1 && (
+            <div className="mt-8 flex items-center justify-center gap-5">
+              <button
+                type="button"
+                onClick={() => showAward(activeIndex - 1)}
+                aria-label={dict.navigation.previous}
+                aria-controls="awards-carousel"
+                className="flex size-11 items-center justify-center rounded-full border border-blue-950/20 text-blue-950 transition-colors hover:bg-blue-950 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-950"
+              >
+                <ArrowIcon previous />
+              </button>
+
+              <span className="text-xs font-semibold tabular-nums text-slate-500">
+                {String(activeIndex + 1).padStart(2, "0")} /{" "}
+                {String(totalAwards).padStart(2, "0")}
+              </span>
+
+              <button
+                type="button"
+                onClick={() => showAward(activeIndex + 1)}
+                aria-label={dict.navigation.next}
+                aria-controls="awards-carousel"
+                className="flex size-11 items-center justify-center rounded-full border border-blue-950/20 text-blue-950 transition-colors hover:bg-blue-950 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-950"
+              >
+                <ArrowIcon />
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>
