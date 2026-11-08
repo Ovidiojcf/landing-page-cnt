@@ -4,6 +4,12 @@ import type { NextProxy, ProxyConfig } from "next/server";
 import { defaultLocale, isValidLocale, locales, type Locale } from "./get-dictionary";
 
 function getPreferredLocale(request: NextRequest): Locale {
+  const savedLocale = request.cookies.get("preferred-locale")?.value;
+
+  if (savedLocale && isValidLocale(savedLocale)) {
+    return savedLocale;
+  }
+
   const acceptLanguage = request.headers.get("accept-language");
 
   if (!acceptLanguage) {
@@ -26,7 +32,7 @@ function getPreferredLocale(request: NextRequest): Locale {
     if (code.startsWith("en")) return "en-us";
   }
 
-  return defaultLocale;
+  return "en-us";
 }
 
 function pathnameHasLocale(pathname: string): boolean {

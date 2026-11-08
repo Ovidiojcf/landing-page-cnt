@@ -11,6 +11,37 @@
       "contact": "Contact"
     }
   },
+  "pages": {
+    "journeys": {
+      "categoryTitle": "Journeys",
+      "description": "This page brings together information about this crossing. Contact our team for further details.",
+      "contactAction": "Contact us",
+      "routes": {
+        "belem-macapa": "Belém to Macapá",
+        "belem-manaus": "Belém to Manaus",
+        "santarem-santana-do-tapara": "Santarém to Santana do Tapará",
+        "santarem-aninduba": "Santarém to Aninduba",
+        "cameta-carapajo": "Cametá to Carapajó",
+        "baiao-varginha": "Baião to Varginha (Transcametá)"
+      }
+    },
+    "socialProjects": {
+      "categoryTitle": "Social Projects",
+      "description": "This page brings together information about this social project. Contact our team to learn more.",
+      "contactAction": "Contact us",
+      "routes": {
+        "ribeirinhos": "Support for River Communities",
+        "luzeiro-xxix": "Luzeiro XXIX Boat",
+        "projeto-ama": "AMA Project"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "categoryTitle": "Camila Navegação e Transportes",
+      "description": "Contact Camila Navegação e Transportes using the details below.",
+      "emailLabel": "Email"
+    }
+  },
   "hero": {
     "title_highlight": "We interconnect",
     "title": "communities and regions",
@@ -96,10 +127,11 @@
   },
   "footer": {
     "logo_url": "/camila-navegacao-e-transportes-logo.svg",
-    "logo_alt": "Logo da Camila Navegação e Transportes",
+    "logo_alt": "Camila Navegação e Transportes logo",
     "company_name": "Camila Navegação e Transportes",
     "office_title": "Headquarters",
-    "address": "Tv. Barão do Triunfo, 3540, Room 2811 - Belém, PA - CEP: 66095-055",
+    "address": "Tv. Barão do Triunfo, 3540, Room 2811 - Belém, PA",
+    "cep": "CEP: 66095-055",
     "email": "contato@camilanavegacao.com.br",
     "phone_label": "Phone",
     "phone_number": "(91) 2121-6440",
@@ -123,28 +155,28 @@
     "items": [
       {
         "name": "Ferryboats",
-        "image": "/fleet/camila-i.jpg",
+        "image": "/photos/ferryboat-cameta-porto.webp",
         "alt": "Ferryboat Isis Pantoja",
         "description": "Our fleet includes ferryboats equipped to transport both passengers and vehicles safely and comfortably. We are on the frontline connecting cities and regions across Amazonian rivers with speed, safety, and reliability.",
         "quantity": "7 Ferryboats"
       },
       {
         "name": "Barges",
-        "image": "/fleet/camila-ii.jpg",
+        "image": "/photos/balsa-lady-neuzinha.webp",
         "alt": "Barge Lady Neulzinha",
         "description": "We operate barges suited for both short crossings and long-distance routes. They are engineered to transport vehicles and passengers safely, ensuring a smooth and efficient journey.",
         "quantity": "9 Barges"
       },
       {
         "name": "Pusher Tugs",
-        "image": "/fleet/camila-iii.jpg",
-        "alt": "Pusher Tug Vovo Wilson",
+        "image": "/photos/empurrador-castelo-forte-camila-navegacao.webp",
+        "alt": "Pusher Tug Castelo Forte",
         "description": "Responsible for pushing barges and other vessels, ensuring operational safety and efficiency during river transit. Our pusher tugs are equipped with high-performance technology to support safe river transport.",
         "quantity": "9 Pusher Tugs"
       },
       {
         "name": "Hospital Ships",
-        "image": "/fleet/camila-iv.jpg",
+        "image": "/photos/LUZEIRO-BELEM-SITE.webp",
         "alt": "Hospital Ship Camila IV",
         "description": "We support social initiatives by transporting patients and healthcare professionals to remote areas in the Amazon. Our hospital vessels are equipped to provide safe and reliable medical support.",
         "quantity": "2 Hospital Ships"
