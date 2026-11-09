@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 import { notFound } from "next/navigation";
-import { getDictionary, isValidLocale } from "@/get-dictionary";
+import {
+  getDictionary,
+  isValidLocale,
+} from "@/get-dictionary";
 import { InfoPage } from "@/components/pages/InfoPage";
-import { LuzeiroProjectPage } from "@/components/pages/LuzeiroProjectPage";
-import { getRouteTitle } from "@/lib/page-content";
+import { SocialProjectArticlePage } from "@/components/pages/SocialProjectArticlePage";
+import {
+  getSocialProject,
+  getSocialProjects,
+} from "@/lib/social-projects";
 
 interface SocialProjectPageProps {
   params: Promise<{ lang: string; slug: string }>;
@@ -16,8 +20,12 @@ export async function generateStaticParams({
 }: {
   params: { lang: string };
 }) {
-  const dict = await getDictionary(params.lang);
-  return Object.keys(dict.pages.socialProjects.routes).map((slug) => ({ slug }));
+  if (!isValidLocale(params.lang)) {
+    throw new Error(`Invalid locale for social project routes: ${params.lang}`);
+  }
+
+  const projects = await getSocialProjects(params.lang);
+  return projects.map(({ slug }) => ({ slug }));
 }
 
 async function getSocialProjectPageData(
@@ -26,52 +34,38 @@ async function getSocialProjectPageData(
   const { lang, slug } = await params;
   if (!isValidLocale(lang)) notFound();
 
-  const dict = await getDictionary(lang);
-  const title = getRouteTitle(dict.pages.socialProjects.routes, slug);
-  if (!title) notFound();
+  const [dict, project] = await Promise.all([
+    getDictionary(lang),
+    getSocialProject(lang, slug),
+  ]);
+  if (!project) notFound();
 
-  const content =
-    slug === "luzeiro-xxix"
-      ? await readFile(
-          join(
-            process.cwd(),
-            "src",
-            "content",
-            lang,
-            "projetos-sociais",
-            "luzeiro-xxix.md",
-          ),
-          "utf8",
-        )
-      : undefined;
-
-  return { lang, dict, title, content };
+  return { lang, dict, project };
 }
 
 export async function generateMetadata({
   params,
 }: SocialProjectPageProps): Promise<Metadata> {
-  const { dict, title, content } = await getSocialProjectPageData(params);
+  const { dict, project } = await getSocialProjectPageData(params);
   return {
-    title: `${title} | ${dict.header.title}`,
-    description:
-      content === undefined
-        ? dict.pages.socialProjects.description
-        : dict.pages.socialProjects.luzeiroDescription,
+    title: `${project.title} | ${dict.header.title}`,
+    description: project.description ?? dict.pages.socialProjects.description,
   };
 }
 
 export default async function SocialProjectPage({
   params,
 }: SocialProjectPageProps) {
-  const { lang, dict, title, content } = await getSocialProjectPageData(params);
+  const { lang, dict, project } = await getSocialProjectPageData(params);
 
-  if (content !== undefined) {
+  if (project.content) {
     return (
-      <LuzeiroProjectPage
-        hookTitle={dict.pages.socialProjects.luzeiroHookTitle}
-        content={content}
-        imageAlt={dict.pages.socialProjects.luzeiroImageAlt}
+      <SocialProjectArticlePage
+        title={project.title}
+        hookTitle={project.hookTitle}
+        content={project.content}
+        image={project.image}
+        imageAlt={project.imageAlt}
       />
     );
   }
@@ -80,8 +74,8 @@ export default async function SocialProjectPage({
     <InfoPage
       lang={lang}
       categoryTitle={dict.pages.socialProjects.categoryTitle}
-      title={title}
-      description={dict.pages.socialProjects.description}
+      title={project.title}
+      description={project.description ?? dict.pages.socialProjects.description}
       contactAction={dict.pages.socialProjects.contactAction}
     />
   );

@@ -28,15 +28,7 @@
     "socialProjects": {
       "categoryTitle": "Projetos Sociais",
       "description": "Esta página reúne informações sobre este projeto social. Para saber mais, entre em contato com a equipe.",
-      "contactAction": "Fale conosco",
-      "routes": {
-        "ribeirinhos": "Apoio aos Ribeirinhos",
-        "luzeiro-xxix": "Projeto Luzeiro no Pará",
-        "projeto-ama": "Projeto AMA"
-      },
-      "luzeiroHookTitle": "Levando saúde a quem vive às margens dos rios",
-      "luzeiroDescription": "Projeto humanitário que leva atendimento médico e odontológico gratuito à população ribeirinha do Pará.",
-      "luzeiroImageAlt": "Lancha Luzeiro XXVI navegando em um rio."
+      "contactAction": "Fale conosco"
     },
     "contact": {
       "title": "Contato",

@@ -1,3 +1,11 @@
+---
+title: "Luzeiro Project in Pará"
+hookTitle: "Bringing healthcare to communities along the rivers"
+description: "A humanitarian project bringing free medical and dental care to riverside communities in Pará."
+image: "/photos/LUZEIRO-XXVI.jpg"
+imageAlt: "The Luzeiro XXVI boat sailing on a river."
+---
+
 ## Luzeiro XXIX Project
 
 The first Luzeiro boat was inaugurated in July 1931 by Leo and Jessie Halliwell, with the goal of bringing health education and free medical and dental care to riverside communities in northern Brazil. Thousands of people benefited directly from the project. In many cases, it was the only way they could receive medical or dental care.

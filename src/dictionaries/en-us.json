@@ -28,15 +28,7 @@
     "socialProjects": {
       "categoryTitle": "Social Projects",
       "description": "This page brings together information about this social project. Contact our team to learn more.",
-      "contactAction": "Contact us",
-      "routes": {
-        "ribeirinhos": "Support for River Communities",
-        "luzeiro-xxix": "Luzeiro Project in Pará",
-        "projeto-ama": "AMA Project"
-      },
-      "luzeiroHookTitle": "Bringing healthcare to communities along the rivers",
-      "luzeiroDescription": "A humanitarian project bringing free medical and dental care to riverside communities in Pará.",
-      "luzeiroImageAlt": "The Luzeiro XXVI boat sailing on a river."
+      "contactAction": "Contact us"
     },
     "contact": {
       "title": "Contact",

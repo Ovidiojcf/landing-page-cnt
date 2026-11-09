@@ -9,6 +9,7 @@ import {
 import "../globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { getSocialProjects } from "@/lib/social-projects";
 
 interface LangLayoutProps {
   children: React.ReactNode;
@@ -45,12 +46,19 @@ export default async function LangLayout({
   }
 
   const locale = lang as Locale;
-  const dictionary = await getDictionary(locale);
+  const [dictionary, socialProjects] = await Promise.all([
+    getDictionary(locale),
+    getSocialProjects(locale),
+  ]);
 
   return (
     <html lang={locale}>
       <body>
-        <Header lang={locale} dict={dictionary.header} />
+        <Header
+          lang={locale}
+          dict={dictionary.header}
+          socialProjects={socialProjects}
+        />
         {children}
         <Footer lang={locale} dict={dictionary.footer} />
       </body>

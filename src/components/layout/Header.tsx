@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { BR, US } from "country-flag-icons/react/3x2";
 import { type Locale } from "@/get-dictionary";
+import type { SocialProjectNavigationItem } from "@/lib/social-projects";
 
 interface HeaderNav {
   home: string;
@@ -25,6 +26,7 @@ export interface HeaderDictionary {
 export interface HeaderProps {
   lang: Locale;
   dict: HeaderDictionary;
+  socialProjects: SocialProjectNavigationItem[];
 }
 
 const localeOptions = [
@@ -139,10 +141,17 @@ interface MobileMenuProps {
   isOpen: boolean;
   lang: Locale;
   dict: HeaderDictionary;
+  socialProjects: SocialProjectNavigationItem[];
   onClose: () => void;
 }
 
-function MobileMenu({ isOpen, lang, dict, onClose }: MobileMenuProps) {
+function MobileMenu({
+  isOpen,
+  lang,
+  dict,
+  socialProjects,
+  onClose,
+}: MobileMenuProps) {
   if (!isOpen) return null;
 
   return (
@@ -188,13 +197,16 @@ function MobileMenu({ isOpen, lang, dict, onClose }: MobileMenuProps) {
           <div className="px-3 py-2 text-sm font-metropolis font-bold text-white/50">
             {dict.nav.social_projects}
           </div>
-          <Link
-            href={`/${lang}/projetos-sociais/ribeirinhos`}
-            onClick={onClose}
-            className="block rounded-lg pl-6 pr-3 py-2 text-sm font-metropolis font-bold text-white/80 transition-colors hover:bg-white/10 hover:text-white"
-          >
-            Apoio aos Ribeirinhos
-          </Link>
+          {socialProjects.map((project) => (
+            <Link
+              key={project.slug}
+              href={`/${lang}/projetos-sociais/${project.slug}`}
+              onClick={onClose}
+              className="block rounded-lg pl-6 pr-3 py-2 text-sm font-metropolis font-bold text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+            >
+              {project.title}
+            </Link>
+          ))}
         </li>
 
         {/* Contato */}
@@ -229,7 +241,7 @@ function MobileMenu({ isOpen, lang, dict, onClose }: MobileMenuProps) {
   );
 }
 
-export function Header({ lang, dict }: HeaderProps) {
+export function Header({ lang, dict, socialProjects }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const logoSrc = normalizeLogoUrl(dict.logo_url);
 
@@ -331,18 +343,15 @@ export function Header({ lang, dict }: HeaderProps) {
               </svg>
             </button>
             <div className="absolute left-0 mt-2 hidden w-56 rounded-lg bg-[#1e293b] p-2 shadow-xl border border-white/10 group-hover:block">
-              <Link
-                href={`/${lang}/projetos-sociais/luzeiro-xxix`}
-                className="block rounded-md px-3 py-2 text-sm font-metropolis font-bold text-white/80 hover:bg-white/10 hover:text-white"
-              >
-                Lancha Luzeiro XXIX
-              </Link>
-              <Link
-                href={`/${lang}/projetos-sociais/projeto-ama`}
-                className="block rounded-md px-3 py-2 text-sm font-metropolis font-bold text-white/80 hover:bg-white/10 hover:text-white"
-              >
-                Projeto AMA
-              </Link>
+              {socialProjects.map((project) => (
+                <Link
+                  key={project.slug}
+                  href={`/${lang}/projetos-sociais/${project.slug}`}
+                  className="block rounded-md px-3 py-2 text-sm font-metropolis font-bold text-white/80 hover:bg-white/10 hover:text-white"
+                >
+                  {project.title}
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -410,6 +419,7 @@ export function Header({ lang, dict }: HeaderProps) {
         isOpen={isMobileMenuOpen}
         lang={lang}
         dict={dict}
+        socialProjects={socialProjects}
         onClose={closeMobileMenu}
       />
     </header>
