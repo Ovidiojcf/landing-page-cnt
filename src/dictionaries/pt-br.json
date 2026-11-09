@@ -31,9 +31,12 @@
       "contactAction": "Fale conosco",
       "routes": {
         "ribeirinhos": "Apoio aos Ribeirinhos",
-        "luzeiro-xxix": "Lancha Luzeiro XXIX",
+        "luzeiro-xxix": "Projeto Luzeiro no Pará",
         "projeto-ama": "Projeto AMA"
-      }
+      },
+      "luzeiroHookTitle": "Levando saúde a quem vive às margens dos rios",
+      "luzeiroDescription": "Projeto humanitário que leva atendimento médico e odontológico gratuito à população ribeirinha do Pará.",
+      "luzeiroImageAlt": "Lancha Luzeiro XXVI navegando em um rio."
     },
     "contact": {
       "title": "Contato",
