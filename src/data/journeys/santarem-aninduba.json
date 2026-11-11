@@ -1,0 +1,52 @@
+{
+  "slug": "santarem-aninduba",
+  "content": {
+    "pt-br": {
+      "title": "Travessia Santarém - Aninduba",
+      "description": "Interligando a cidade de Santarém à PA-257 (Translagos, Juruti e região)."
+    },
+    "en-us": {
+      "title": "Santarém - Aninduba Crossing",
+      "description": "Connecting the city of Santarém to PA-257 (Translagos, Juruti, and the surrounding region)."
+    }
+  },
+  "directions": [
+    {
+      "origin": "Santarém",
+      "destination": "Aninduba",
+      "schedule": [
+        {
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday",
+            "sunday"
+          ],
+          "times": ["05:00"]
+        }
+      ]
+    },
+    {
+      "origin": "Aninduba",
+      "destination": "Santarém",
+      "schedule": [
+        {
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday",
+            "sunday"
+          ],
+          "times": ["17:00"]
+        }
+      ]
+    }
+  ],
+  "contacts": ["(93) 3522-1794", "(93) 99121-4030"]
+}
