@@ -17,10 +17,10 @@ export default async function Home({ params }: HomePageProps) {
   return (
     <main>
       <Hero dict={dictionary.hero} />
-      <Journeys dict={dictionary.journeys} />
+      <History dict={dictionary.history} />
+      <Journeys lang={lang} dict={dictionary.journeys} />
       <Awards dict={dictionary.awards}/>
       <Activity dict={dictionary.company} />
-      <History dict={dictionary.history} />
       <Fleet dict={dictionary.fleet} />
     </main>
   );

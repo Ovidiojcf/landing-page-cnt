@@ -1,0 +1,76 @@
+{
+  "slug": "cameta-carapajo",
+  "content": {
+    "pt-br": {
+      "title": "Travessia Cametá x Carapajó",
+      "description": "Travessia interliga a PA 151 com Cametá e região."
+    },
+    "en-us": {
+      "title": "Cametá x Carapajó Crossing",
+      "description": "Crossing that connects PA 151 with Cametá and the region."
+    }
+  },
+  "directions": [
+    {
+      "origin": "Cametá",
+      "destination": "Carapajó",
+      "schedule": [
+        {
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "times": [
+            "04:00",
+            "06:00",
+            "08:00",
+            "10:00",
+            "12:00",
+            "14:00",
+            "16:00",
+            "18:00"
+          ]
+        },
+        {
+          "days": ["sunday"],
+          "times": ["06:00", "08:00", "10:00", "12:00", "16:00"]
+        }
+      ]
+    },
+    {
+      "origin": "Carapajó",
+      "destination": "Cametá",
+      "schedule": [
+        {
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "times": [
+            "06:00",
+            "08:00",
+            "10:00",
+            "12:00",
+            "14:00",
+            "16:00",
+            "18:00",
+            "20:00"
+          ]
+        },
+        {
+          "days": ["sunday"],
+          "times": ["08:00", "10:00", "12:00", "14:00", "18:00"]
+        }
+      ]
+    }
+  ],
+  "contacts": ["(91) 99148-7827", "(91) 2121-6440"]
+}

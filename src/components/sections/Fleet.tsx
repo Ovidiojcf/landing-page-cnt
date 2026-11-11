@@ -2,6 +2,8 @@ import Image from "next/image";
 
 interface FleetItem {
   name: string;
+  image: string;
+  alt: string;
   description: string;
   quantity: string;
 }
@@ -34,14 +36,11 @@ export function Fleet({ dict }: FleetProps) {
 
         <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-8 md:gap-y-10">
           {dict.items.map((item) => (
-            <article
-              key={item.name}
-              className="min-w-0"
-            >
-              <div className="relative aspect-video max-h-70 w-full  overflow-hidden">
+            <article key={item.name} className="min-w-0">
+              <div className="relative aspect-video max-h-70 w-full overflow-hidden">
                 <Image
-                  src="/FB_VALENTINA_02.png"
-                  alt=""
+                  src={item.image}
+                  alt={item.alt}
                   aria-hidden="true"
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
@@ -49,7 +48,7 @@ export function Fleet({ dict }: FleetProps) {
                 />
               </div>
 
-              <div className="p-4 sm:p-5">
+              <div className="py-4 sm:py-5">
                 <p className="mb-2 inline-flex rounded-sm border border-blue-950/15 bg-blue-950/5 px-2 py-1 font-metropolis text-xs text-blue-950">
                   {item.quantity}
                 </p>

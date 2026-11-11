@@ -1,0 +1,61 @@
+{
+    "slug": "baiao-varginha-transcameta",
+    "content": {
+        "pt-br": {
+            "title": "Travessia Baião - Varginha (Transcametá)",
+            "description": "Travessia interliga a cidade de Baião a região de Tucuruí."
+        },
+        "en-us": {
+            "title": "Baião - Varginha Crossing (Transcametá)",
+            "description": "Crossing that connects the city of Baião to the Tucuruí region."
+        }
+    },
+    "directions": [
+        {
+            "origin": "Baião",
+            "destination": "Varginha",
+            "schedule": [
+                {
+                    "days": [
+                        "monday",
+                        "tuesday",
+                        "wednesday",
+                        "thursday",
+                        "friday",
+                        "saturday",
+                        "sunday"
+                    ],
+                    "times": [
+                        "07:00",
+                        "14:00"
+                    ]
+                }
+            ]
+        },
+        {
+            "origin": "Varginha",
+            "destination": "Baião",
+            "schedule": [
+                {
+                    "days": [
+                        "monday",
+                        "tuesday",
+                        "wednesday",
+                        "thursday",
+                        "friday",
+                        "saturday",
+                        "sunday"
+                    ],
+                    "times": [
+                        "08:00",
+                        "17:00"
+                    ]
+                }
+            ]
+        }
+    ],
+    "contacts": [
+        "(91) 98518-0213",
+        "(91) 2121-6440"
+    ]
+}

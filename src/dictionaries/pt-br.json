@@ -11,6 +11,59 @@
       "contact": "Contatos"
     }
   },
+  "pages": {
+    "journeys": {
+      "categoryTitle": "Travessias",
+      "description": "Esta página reúne informações sobre esta travessia. Para consultar detalhes, entre em contato com a equipe.",
+      "contactAction": "Fale conosco",
+      "routes": {
+        "santarem-santana-do-tapara": "Santarém x Santana do Tapará",
+        "santarem-aninduba": "Santarém x Aninduba",
+        "cameta-carapajo": "Cametá x Carapajó",
+        "baiao-varginha-transcameta": "Baião x Varginha (Transcametá)"
+      },
+      "detail": {
+        "scheduleTitle": "Horários de saída",
+        "departuresFrom": "Saídas de",
+        "to": "para",
+        "dayColumn": "Dia da semana",
+        "timesColumn": "Horários",
+        "days": {
+          "full": {
+            "monday": "Segunda-feira",
+            "tuesday": "Terça-feira",
+            "wednesday": "Quarta-feira",
+            "thursday": "Quinta-feira",
+            "friday": "Sexta-feira",
+            "saturday": "Sábado",
+            "sunday": "Domingo"
+          },
+          "range": {
+            "monday": "segunda",
+            "tuesday": "terça",
+            "wednesday": "quarta",
+            "thursday": "quinta",
+            "friday": "sexta",
+            "saturday": "sábado",
+            "sunday": "domingo"
+          },
+          "rangeSeparator": "a"
+        },
+        "localContactsTitle": "Contatos locais"
+      }
+    },
+    "socialProjects": {
+      "categoryTitle": "Projetos Sociais",
+      "description": "Esta página reúne informações sobre este projeto social. Para saber mais, entre em contato com a equipe.",
+      "contactAction": "Fale conosco"
+    },
+    "contact": {
+      "title": "Contato",
+      "categoryTitle": "Camila Navegação e Transportes",
+      "description": "Entre em contato com a Camila Navegação e Transportes pelos canais abaixo.",
+      "emailLabel": "E-mail"
+    }
+  },
   "hero": {
     "title_highlight": "Interligamos",
     "title": "comunidades e regiões",
@@ -22,27 +75,31 @@
     "title": "Serviços",
     "description": "Transporte de veículos e passageiros nos seguintes percursos.",
     "directionSeparator": "para",
-    "schedulesLabel": "Horários e tarifas",
+    "schedulesLabel": "Horários",
     "routes": [
       {
         "state": "Pará",
         "origin": "Santarém",
-        "destination": "Santana do Tapará"
+        "destination": "Santana do Tapará",
+        "slug": "santarem-santana-do-tapara"
       },
       {
         "state": "Pará",
         "origin": "Santarém",
-        "destination": "Aninduba"
+        "destination": "Aninduba",
+        "slug": "santarem-aninduba"
       },
       {
         "state": "Pará",
         "origin": "Cametá",
-        "destination": "Carapajó"
+        "destination": "Carapajó",
+        "slug": "cameta-carapajo"
       },
       {
         "state": "Pará",
         "origin": "Baião",
-        "destination": "Virgínia"
+        "destination": "Varginha",
+        "slug": "baiao-varginha-transcameta"
       },
       {
         "state": "Pará",
@@ -79,7 +136,7 @@
       {
         "name": "Educando Pequeno Gigante",
         "image": "/awards/educando-pequeno-gigante.svg",
-        "alt": "Medalha da premiação Educando Pequeno Gigante",
+        "alt": "Medalha da premiação Educando o Pequeno Gigante",
         "description": "A descrição desta premiação será adicionada após o levantamento das informações."
       },
       {
@@ -99,7 +156,8 @@
     "logo_alt": "Logo da Camila Navegação e Transportes",
     "company_name": "Camila Navegação e Transportes",
     "office_title": "Escritório Central",
-    "address": "Tv. Barão do Triunfo, 3540, sala 2811 - Belém PA - CEP: 66095-055",
+    "address": "Tv. Barão do Triunfo, 3540, sala 2811 - Belém, PA",
+    "cep": "CEP: 66095-055",
     "email": "contato@camilanavegacao.com.br",
     "phone_label": "Tel",
     "phone_number": "(91) 2121-6440",
@@ -122,30 +180,30 @@
     "items": [
       {
         "name": "Ferryboat",
-        "image": "/fleet/camila-i.jpg",
+        "image": "/photos/ferryboat-cameta-porto.webp",
         "alt": "Ferryboat Isis Pantoja",
         "description": "Nossa empresa conta uma linha de ferryboats com capacidade para transportar passageiros e veículos, garantindo uma travessia segura e confortável. Somos a linha de frente que conecta operações entre cidades e regiões, com segurança, conforto e velocidade sob os rios amazônicos.",
         "quantity": "7 Ferryboats"
       },
       {
         "name": "Balsas",
-        "image": "/fleet/camila-ii.jpg",
+        "image": "/photos/balsa-lady-neuzinha.webp",
         "alt": "Balsa Lady Neulzinha",
         "description": "Temos balsas que conectam desde travessias curtas até de longas durações. Elas são projetadas para transportar passageiros e veículos com segurança e conforto, garantindo uma travessia tranquila e eficiente.",
         "quantity": "9 Balsas"
       },
       {
         "name": "Empurradores",
-        "image": "/fleet/camila-iii.jpg",
-        "alt": "Empurrdor Vovo Wilson",
+        "image": "/photos/empurrador-castelo-forte-camila-navegacao.webp",
+        "alt": "Empurrdor Castelo Forte",
         "description": "São os responsaveis por empurrar balsas e outros tipos de embarcações, garantindo a segurança e eficiência das travessias. Nossos empurradores são equipados com tecnologia de ponta para garantir a segurança e conforto dos passageiros.",
         "quantity": "9 Empurradores"
       },
       {
         "name": "Barcos Hospitais",
-        "image": "/fleet/camila-iv.jpg",
+        "image": "/photos/LUZEIRO-BELEM-SITE.webp",
         "alt": "Barco Hospital Camila IV",
-        "description": "A empresa auxilie em projetos sociais, como o transporte de pacientes e profissionais de saúde para regiões remotas da Amazônia. Nossos barcos hospitais são equipados com tecnologia de ponta para garantir a segurança e conforto dos passageiros.",
+        "description": "A empresa auxilia em projetos sociais, como o transporte de pacientes e profissionais de saúde para regiões remotas da Amazônia. Nossos barcos hospitais são equipados com tecnologia de ponta para garantir a segurança e conforto dos passageiros.",
         "quantity": "2 Barcos Hospitais"
       }
     ]
