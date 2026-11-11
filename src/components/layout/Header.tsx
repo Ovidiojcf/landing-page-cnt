@@ -26,6 +26,7 @@ export interface HeaderDictionary {
 export interface HeaderProps {
   lang: Locale;
   dict: HeaderDictionary;
+  journeyRoutes: Record<string, string>;
   socialProjects: SocialProjectNavigationItem[];
 }
 
@@ -141,6 +142,7 @@ interface MobileMenuProps {
   isOpen: boolean;
   lang: Locale;
   dict: HeaderDictionary;
+  journeyRoutes: Record<string, string>;
   socialProjects: SocialProjectNavigationItem[];
   onClose: () => void;
 }
@@ -149,6 +151,7 @@ function MobileMenu({
   isOpen,
   lang,
   dict,
+  journeyRoutes,
   socialProjects,
   onClose,
 }: MobileMenuProps) {
@@ -176,20 +179,16 @@ function MobileMenu({
           <div className="px-3 py-2 text-sm font-metropolis font-bold text-white/50">
             {dict.nav.journeys}
           </div>
-          <Link
-            href={`/${lang}/travessias/belem-macapa`}
-            onClick={onClose}
-            className="block rounded-lg pl-6 pr-3 py-2 text-sm font-metropolis font-bold text-white/80 transition-colors hover:bg-white/10 hover:text-white"
-          >
-            Belém x Macapá
-          </Link>
-          <Link
-            href={`/${lang}/travessias/belem-manaus`}
-            onClick={onClose}
-            className="block rounded-lg pl-6 pr-3 py-2 text-sm font-metropolis font-bold text-white/80 transition-colors hover:bg-white/10 hover:text-white"
-          >
-            Belém x Manaus
-          </Link>
+          {Object.entries(journeyRoutes).map(([slug, title]) => (
+            <Link
+              key={slug}
+              href={`/${lang}/travessias/${slug}`}
+              onClick={onClose}
+              className="block rounded-lg pl-6 pr-3 py-2 text-sm font-metropolis font-bold text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+            >
+              {title}
+            </Link>
+          ))}
         </li>
 
         {/* Projetos Sociais */}
@@ -241,7 +240,12 @@ function MobileMenu({
   );
 }
 
-export function Header({ lang, dict, socialProjects }: HeaderProps) {
+export function Header({
+  lang,
+  dict,
+  journeyRoutes,
+  socialProjects,
+}: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const logoSrc = normalizeLogoUrl(dict.logo_url);
 
@@ -264,8 +268,8 @@ export function Header({ lang, dict, socialProjects }: HeaderProps) {
           <Image
             src={logoSrc}
             alt={dict.logo_alt}
-            width={160}
-            height={40}
+            width={172}
+            height={139}
             className="h-9 w-auto md:h-10"
             priority
           />
@@ -299,30 +303,15 @@ export function Header({ lang, dict, socialProjects }: HeaderProps) {
               </svg>
             </button>
             <div className="absolute left-0 mt-2 hidden w-56 rounded-lg bg-[#1e293b] p-2 shadow-xl border border-white/10 group-hover:block">
-              <Link
-                href={`/${lang}/travessias/santarem-santana-do-tapara`}
-                className="block rounded-md px-3 py-2 text-sm font-metropolis font-bold text-white/80 hover:bg-white/10 hover:text-white"
-              >
-                Santarém x Santana do Tapará
-              </Link>
-              <Link
-                href={`/${lang}/travessias/santarem-aninduba`}
-                className="block rounded-md px-3 py-2 text-sm font-metropolis font-bold text-white/80 hover:bg-white/10 hover:text-white"
-              >
-                Santarém x Aninduba
-              </Link>
-              <Link
-                href={`/${lang}/travessias/cameta-carapajo`}
-                className="block rounded-md px-3 py-2 text-sm font-metropolis font-bold text-white/80 hover:bg-white/10 hover:text-white"
-              >
-                Cametá x Carapajó
-              </Link>
-              <Link
-                href={`/${lang}/travessias/baiao-varginha`}
-                className="block rounded-md px-3 py-2 text-sm font-metropolis font-bold text-white/80 hover:bg-white/10 hover:text-white"
-              >
-                Baião x Varginha (Transcametá)
-              </Link>
+              {Object.entries(journeyRoutes).map(([slug, title]) => (
+                <Link
+                  key={slug}
+                  href={`/${lang}/travessias/${slug}`}
+                  className="block rounded-md px-3 py-2 text-sm font-metropolis font-bold text-white/80 hover:bg-white/10 hover:text-white"
+                >
+                  {title}
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -419,6 +408,7 @@ export function Header({ lang, dict, socialProjects }: HeaderProps) {
         isOpen={isMobileMenuOpen}
         lang={lang}
         dict={dict}
+        journeyRoutes={journeyRoutes}
         socialProjects={socialProjects}
         onClose={closeMobileMenu}
       />

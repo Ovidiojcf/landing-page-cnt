@@ -57,6 +57,7 @@ export default async function LangLayout({
         <Header
           lang={locale}
           dict={dictionary.header}
+          journeyRoutes={dictionary.pages.journeys.routes}
           socialProjects={socialProjects}
         />
         {children}
