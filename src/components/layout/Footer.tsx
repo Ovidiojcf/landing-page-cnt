@@ -16,9 +16,10 @@ export function Footer({ lang, dict }: FooterProps) {
           <Image
             src={dict.logo_url}
             alt={dict.logo_alt}
-            width={400}
-            height={100}
-            className="h-14 w-auto sm:h-16 xl:h-24"
+            width={172}
+            height={139}
+            className="h-9 w-auto md:h-10 lg:h-26"
+            priority
           />
         </div>
 
@@ -53,7 +54,6 @@ export function Footer({ lang, dict }: FooterProps) {
             </a>
           </p>
         </div>
-
         <p className="text-center text-sm text-white/80 xl:col-span-3">
           {dict.copyright}
         </p>
