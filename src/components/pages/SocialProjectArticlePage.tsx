@@ -1,37 +1,43 @@
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 
-interface LuzeiroProjectPageProps {
-  hookTitle: string;
+interface SocialProjectArticlePageProps {
+  title: string;
+  hookTitle?: string;
   content: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
 }
 
-export function LuzeiroProjectPage({
+export function SocialProjectArticlePage({
+  title,
   hookTitle,
   content,
+  image,
   imageAlt,
-}: LuzeiroProjectPageProps) {
+}: SocialProjectArticlePageProps) {
   return (
     <main className="bg-white">
       <section className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
         <div className="mx-auto max-w-4xl">
           <h1 className="text-center font-metropolis text-2xl font-bold leading-tight text-slate-950 sm:text-3xl lg:text-4xl">
-            {hookTitle}
+            {hookTitle ?? title}
           </h1>
 
-          <figure className="mt-6 sm:mt-8">
-            <div className="relative mx-auto aspect-video w-full max-w-3xl overflow-hidden rounded-xl bg-slate-100">
-              <Image
-                src="/photos/LUZEIRO-XXVI.jpg"
-                alt={imageAlt}
-                fill
-                sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 1280px) calc(100vw - 3rem), 768px"
-                preload
-                className="object-cover object-[35%_50%]"
-              />
-            </div>
-          </figure>
+          {image && imageAlt && (
+            <figure className="mt-6 sm:mt-8">
+              <div className="relative mx-auto aspect-video w-full max-w-3xl overflow-hidden rounded-xl bg-slate-100">
+                <Image
+                  src={image}
+                  alt={imageAlt}
+                  fill
+                  sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 1280px) calc(100vw - 3rem), 768px"
+                  preload
+                  className="object-cover object-[35%_50%]"
+                />
+              </div>
+            </figure>
+          )}
 
           <article className="mx-auto mt-8 max-w-3xl text-base leading-7 text-slate-700 sm:mt-10 sm:text-lg sm:leading-8">
             <ReactMarkdown

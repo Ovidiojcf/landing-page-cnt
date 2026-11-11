@@ -1,3 +1,11 @@
+---
+title: "Projeto Luzeiro no Pará"
+hookTitle: "Levando saúde a quem vive às margens dos rios"
+description: "Projeto humanitário que leva atendimento médico e odontológico gratuito à população ribeirinha do Pará."
+image: "/photos/LUZEIRO-XXVI.jpg"
+imageAlt: "Lancha Luzeiro XXVI navegando em um rio."
+---
+
 ## Projeto Luzeiro XXIX
 
 A primeira lancha Luzeiro foi inaugurada em julho de 1931 pelo casal Leo e Jessie Halliwell, com o objetivo de levar educação sanitária, assistência médica e odontológica gratuita às populações ribeirinhas do norte do Brasil. Milhares de pessoas foram diretamente beneficiadas pelo Projeto. Em muitos casos, esta foi a única maneira destas pessoas receberem algum atendimento médico e dentário.

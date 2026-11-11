@@ -17,26 +17,45 @@
       "description": "This page brings together information about this crossing. Contact our team for further details.",
       "contactAction": "Contact us",
       "routes": {
-        "belem-macapa": "Belém to Macapá",
-        "belem-manaus": "Belém to Manaus",
         "santarem-santana-do-tapara": "Santarém to Santana do Tapará",
         "santarem-aninduba": "Santarém to Aninduba",
         "cameta-carapajo": "Cametá to Carapajó",
-        "baiao-varginha": "Baião to Varginha (Transcametá)"
+        "baiao-varginha-transcameta": "Baião to Varginha (Transcametá)"
+      },
+      "detail": {
+        "scheduleTitle": "Departure schedule",
+        "departuresFrom": "Departures from",
+        "to": "to",
+        "dayColumn": "Day of the week",
+        "timesColumn": "Departure times",
+        "days": {
+          "full": {
+            "monday": "Monday",
+            "tuesday": "Tuesday",
+            "wednesday": "Wednesday",
+            "thursday": "Thursday",
+            "friday": "Friday",
+            "saturday": "Saturday",
+            "sunday": "Sunday"
+          },
+          "range": {
+            "monday": "Monday",
+            "tuesday": "Tuesday",
+            "wednesday": "Wednesday",
+            "thursday": "Thursday",
+            "friday": "Friday",
+            "saturday": "Saturday",
+            "sunday": "Sunday"
+          },
+          "rangeSeparator": "to"
+        },
+        "localContactsTitle": "Local contacts"
       }
     },
     "socialProjects": {
       "categoryTitle": "Social Projects",
       "description": "This page brings together information about this social project. Contact our team to learn more.",
-      "contactAction": "Contact us",
-      "routes": {
-        "ribeirinhos": "Support for River Communities",
-        "luzeiro-xxix": "Luzeiro Project in Pará",
-        "projeto-ama": "AMA Project"
-      },
-      "luzeiroHookTitle": "Bringing healthcare to communities along the rivers",
-      "luzeiroDescription": "A humanitarian project bringing free medical and dental care to riverside communities in Pará.",
-      "luzeiroImageAlt": "The Luzeiro XXVI boat sailing on a river."
+      "contactAction": "Contact us"
     },
     "contact": {
       "title": "Contact",
@@ -56,27 +75,31 @@
     "title": "Services",
     "description": "Passenger and vehicle transportation on the following routes.",
     "directionSeparator": "to",
-    "schedulesLabel": "Schedules and fares",
+    "schedulesLabel": "Schedules",
     "routes": [
       {
         "state": "Pará",
         "origin": "Santarém",
-        "destination": "Santana do Tapará"
+        "destination": "Santana do Tapará",
+        "slug": "santarem-santana-do-tapara"
       },
       {
         "state": "Pará",
         "origin": "Santarém",
-        "destination": "Aninduba"
+        "destination": "Aninduba",
+        "slug": "santarem-aninduba"
       },
       {
         "state": "Pará",
         "origin": "Cametá",
-        "destination": "Carapajó"
+        "destination": "Carapajó",
+        "slug": "cameta-carapajo"
       },
       {
         "state": "Pará",
         "origin": "Baião",
-        "destination": "Virgínia"
+        "destination": "Varginha",
+        "slug": "baiao-varginha-transcameta"
       },
       {
         "state": "Pará",

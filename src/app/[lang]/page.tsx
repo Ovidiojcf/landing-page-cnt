@@ -18,7 +18,7 @@ export default async function Home({ params }: HomePageProps) {
     <main>
       <Hero dict={dictionary.hero} />
       <History dict={dictionary.history} />
-      <Journeys dict={dictionary.journeys} />
+      <Journeys lang={lang} dict={dictionary.journeys} />
       <Awards dict={dictionary.awards}/>
       <Activity dict={dictionary.company} />
       <Fleet dict={dictionary.fleet} />
