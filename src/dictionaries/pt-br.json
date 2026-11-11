@@ -17,12 +17,39 @@
       "description": "Esta página reúne informações sobre esta travessia. Para consultar detalhes, entre em contato com a equipe.",
       "contactAction": "Fale conosco",
       "routes": {
-        "belem-macapa": "Belém x Macapá",
-        "belem-manaus": "Belém x Manaus",
         "santarem-santana-do-tapara": "Santarém x Santana do Tapará",
         "santarem-aninduba": "Santarém x Aninduba",
         "cameta-carapajo": "Cametá x Carapajó",
-        "baiao-varginha": "Baião x Varginha (Transcametá)"
+        "baiao-varginha-transcameta": "Baião x Varginha (Transcametá)"
+      },
+      "detail": {
+        "scheduleTitle": "Horários de saída",
+        "departuresFrom": "Saídas de",
+        "to": "para",
+        "dayColumn": "Dia da semana",
+        "timesColumn": "Horários",
+        "days": {
+          "full": {
+            "monday": "Segunda-feira",
+            "tuesday": "Terça-feira",
+            "wednesday": "Quarta-feira",
+            "thursday": "Quinta-feira",
+            "friday": "Sexta-feira",
+            "saturday": "Sábado",
+            "sunday": "Domingo"
+          },
+          "range": {
+            "monday": "segunda",
+            "tuesday": "terça",
+            "wednesday": "quarta",
+            "thursday": "quinta",
+            "friday": "sexta",
+            "saturday": "sábado",
+            "sunday": "domingo"
+          },
+          "rangeSeparator": "a"
+        },
+        "localContactsTitle": "Contatos locais"
       }
     },
     "socialProjects": {
@@ -48,27 +75,31 @@
     "title": "Serviços",
     "description": "Transporte de veículos e passageiros nos seguintes percursos.",
     "directionSeparator": "para",
-    "schedulesLabel": "Horários e tarifas",
+    "schedulesLabel": "Horários",
     "routes": [
       {
         "state": "Pará",
         "origin": "Santarém",
-        "destination": "Santana do Tapará"
+        "destination": "Santana do Tapará",
+        "slug": "santarem-santana-do-tapara"
       },
       {
         "state": "Pará",
         "origin": "Santarém",
-        "destination": "Aninduba"
+        "destination": "Aninduba",
+        "slug": "santarem-aninduba"
       },
       {
         "state": "Pará",
         "origin": "Cametá",
-        "destination": "Carapajó"
+        "destination": "Carapajó",
+        "slug": "cameta-carapajo"
       },
       {
         "state": "Pará",
         "origin": "Baião",
-        "destination": "Virgínia"
+        "destination": "Varginha",
+        "slug": "baiao-varginha-transcameta"
       },
       {
         "state": "Pará",
